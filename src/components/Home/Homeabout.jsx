@@ -2,7 +2,7 @@ import React from "react";
 import "./Homeabout.css";
 
 // Material icon (npm: @mui/icons-material)
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+
 
 export default function Homeabout({
   eyebrow = "About Us",
