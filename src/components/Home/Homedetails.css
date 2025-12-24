@@ -1,0 +1,360 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Section */
+.hdx {
+  width: 100%;
+  background: #ffffff;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 300;
+  padding: 96px 0;
+  position: relative;
+}
+
+.hdx__container {
+  width: min(1540px, 100%);
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+/* Header */
+.hdx__header {
+  text-align: left;
+  margin-bottom: 96px;
+  max-width: 1100px;
+}
+
+/* Tag */
+.hdx__tag {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: black;
+  padding: calc(12px * 1.2) calc(20px * 1.2);
+  background: rgba(31, 106, 99, 0.1);
+  border-radius: 8px;
+  margin-bottom: calc(32px * 1.2);
+}
+
+/* Rule */
+.hdx__rule {
+  height: 1px;
+  background: rgba(15, 15, 15, 0.12);
+  width: 100%;
+  margin-bottom: calc(48px * 1.2);
+}
+
+/* Headline - Scaled up significantly */
+.hdx__headline {
+  margin: 0;
+  color: #0f0f0f;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-size: clamp(36px, 5vw, 84px);
+  max-width: 1000px;
+}
+
+/* Grid - Larger spacing */
+.hdx__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-top: calc(64px * 1.2);
+  border-top: 1px solid rgba(15, 15, 15, 0.12);
+}
+
+/* Card - Larger padding */
+.hdx__card {
+  padding: calc(64px * 1.2) calc(48px * 1.2);
+  border-right: 1px solid rgba(15, 15, 15, 0.12);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.hdx__card:hover {
+  background: rgba(31, 106, 99, 0.02);
+}
+
+.hdx__card:last-child {
+  border-right: 0;
+}
+
+/* Card Top - Larger spacing */
+.hdx__cardTop {
+  display: flex;
+  align-items: center;
+  gap: calc(20px * 1.2);
+  margin-bottom: calc(32px * 1.2);
+}
+
+/* Icon - Larger size */
+.hdx__iconWrapper {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e82222;
+  color: #ffffff;
+  flex-shrink: 0;
+  border: 1px solid rgba(31, 106, 99, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hdx__card:hover .hdx__iconWrapper {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(15, 15, 15, 0.08);
+}
+
+.hdx__iconWrapper svg {
+  font-size: 28px;
+  width: 28px;
+  height: 28px;
+}
+
+/* Title - Larger font */
+.hdx__title {
+  margin: 0;
+  color: #0f0f0f;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* Text - Larger font and spacing */
+.hdx__text {
+  margin: 0;
+  color: rgba(15, 15, 15, 0.75);
+  line-height: 1.8;
+  font-size: 18px;
+  font-weight: 300;
+  max-width: 500px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .hdx__container {
+    padding: 0 60px;
+  }
+  
+  .hdx__headline {
+    font-size: clamp(32px, 4.5vw, 72px);
+  }
+  
+  .hdx__tag {
+    padding: calc(12px * 1.1) calc(20px * 1.1);
+    margin-bottom: calc(32px * 1.1);
+  }
+  
+  .hdx__rule {
+    margin-bottom: calc(48px * 1.1);
+  }
+  
+  .hdx__grid {
+    margin-top: calc(64px * 1.1);
+  }
+  
+  .hdx__card {
+    padding: calc(64px * 1.1) calc(48px * 1.1);
+  }
+  
+  .hdx__cardTop {
+    gap: calc(20px * 1.1);
+    margin-bottom: calc(32px * 1.1);
+  }
+}
+
+@media (max-width: 992px) {
+  .hdx__container {
+    padding: 0 40px;
+  }
+  
+  .hdx__grid {
+    grid-template-columns: 1fr;
+    border-top: none;
+  }
+  
+  .hdx__card {
+    padding: 48px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(15, 15, 15, 0.12);
+  }
+  
+  .hdx__card:last-child {
+    border-bottom: 0;
+  }
+  
+  .hdx__cardTop {
+    gap: 20px;
+  }
+  
+  .hdx__text {
+    max-width: 100%;
+  }
+  
+  .hdx__headline {
+    font-size: clamp(28px, 4vw, 56px);
+  }
+  
+  .hdx__tag {
+    padding: 12px 20px;
+    margin-bottom: 32px;
+  }
+  
+  .hdx__rule {
+    margin-bottom: 48px;
+  }
+  
+  .hdx__grid {
+    margin-top: 64px;
+  }
+  
+  .hdx__cardTop {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hdx__container {
+    padding: 0 24px;
+  }
+  
+  .hdx {
+    padding: 64px 0;
+  }
+  
+  .hdx__header {
+    margin-bottom: 64px;
+  }
+  
+  .hdx__tag {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+  
+  .hdx__rule {
+    margin-bottom: 32px;
+  }
+  
+  .hdx__iconWrapper {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .hdx__iconWrapper svg {
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+  }
+  
+  .hdx__title {
+    font-size: 20px;
+  }
+  
+  .hdx__text {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  
+  .hdx__card {
+    padding: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hdx__container {
+    padding: 0 16px;
+  }
+  
+  .hdx {
+    padding: 48px 0;
+  }
+  
+  .hdx__headline {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  
+  .hdx__card {
+    padding: 32px;
+  }
+  
+  .hdx__cardTop {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .hdx__iconWrapper {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .hdx__iconWrapper svg {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hdx__card {
+  animation: fadeIn 0.6s ease forwards;
+  animation-delay: calc(var(--index, 0) * 0.1s);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hdx__card,
+  .hdx__iconWrapper {
+    animation: none;
+    transition: none;
+  }
+  
+  .hdx__card:hover .hdx__iconWrapper {
+    transform: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .hdx__tag {
+    background: #e82222;
+    color: #ffffff;
+    border: 2px solid #e82222;
+  }
+  
+  .hdx__rule {
+    background: #0f0f0f;
+    height: 2px;
+  }
+  
+  .hdx__card {
+    border-color: #0f0f0f;
+  }
+  
+  .hdx__iconWrapper {
+    border: 2px solid #e82222;
+  }
+}
